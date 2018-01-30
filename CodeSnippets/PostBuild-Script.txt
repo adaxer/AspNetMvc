@@ -1,0 +1,1 @@
+xcopy /Y /R /E "$(TargetDir)*.*" "$(SolutionDir)PL\Web\WebClient\bin"
