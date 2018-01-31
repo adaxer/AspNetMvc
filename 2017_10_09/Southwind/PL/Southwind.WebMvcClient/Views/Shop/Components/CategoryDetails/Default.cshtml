@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Southwind.Data.Product>
+
+<h3>Products</h3>
+<ul>
+    @foreach (var p in Model)
+    {
+        <li>@p.ProductName</li>
+    }
+</ul>

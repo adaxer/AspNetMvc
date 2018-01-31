@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Southwind.Data.Category>
+<p>
+    <a asp-action="CreateCategory">Create New</a>
+</p>
+<table class="table table-responsive table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "CategoryDetails", new { id = item.CategoryId }) |
+                    <div class="btn btn-primary" onclick="LoadComponent('@item.CategoryId')">Products</div>
+                </td>
+            </tr>
+            <tr id="tr_@item.CategoryId" class="trCollapse">
+                <td colspan="3">
+                    <div id="div_@item.CategoryId"></div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <script language="javascript">
+        function LoadComponent(id) {
+            $('#tr_' + id).toggleClass('trCollapse');
+            if(!$('#tr_'+id).hasClass('trCollapse'))
+                $('#div_'+id).load('LoadComponent/'+id); 
+        }
+    </script>
+}

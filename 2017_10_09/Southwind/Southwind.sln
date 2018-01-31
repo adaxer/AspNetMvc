@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Lib", "00 - Lib", "{D7BB7DF7-C524-4B58-8F37-308659F0FE91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10 - Contracts", "10 - Contracts", "{F75EBD7E-3BE7-4421-B6C6-C18AC07C3A63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20 - Data", "20 - Data", "{91C19966-8D56-4522-BAA8-91C806521FD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "30 - Business", "30 - Business", "{A8F694F0-20AA-4C66-A195-0CE56CCE96EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "40 - Service", "40 - Service", "{D573C03A-D18E-435E-8BBC-667661F1972B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "50 - Presentation", "50 - Presentation", "{E43645B4-812A-456C-B188-4C2439724F2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{CF018437-BAD8-4AF5-A940-9B7215BA9889}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Southwind.WebMvcClient", "PL\Southwind.WebMvcClient\Southwind.WebMvcClient.csproj", "{45FE97D7-A0C2-425F-9B8A-9BF1D8DA3616}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southwind.Repositories", "DAL\Southwind.Repositories\Southwind.Repositories.csproj", "{CCBF89A2-0714-4490-8B62-192819563C0F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Southwind.Models", "CL\Southwind.Models\Southwind.Models.csproj", "{3D58C893-76EC-41ED-83A8-912CEAFCB958}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Southwind.Interfaces", "CL\Southwind.Interfaces\Southwind.Interfaces.csproj", "{6CEF804F-DAB8-4C86-B632-BB090A0F707E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southwind.BusinessObjects", "BL\Southwind.BusinessObjects\Southwind.BusinessObjects.csproj", "{80472DCB-7A72-4A0F-A996-E64C081B5759}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Southwind.RestApi", "SL\Southwind.RestApi\Southwind.RestApi.csproj", "{AB17EA4B-7BE0-4E7A-9E28-53E2A39FACCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{DCB17E13-45CB-4856-ACBB-9A1C5AB71C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southwind.Common", "PL\Southwind.Common\Southwind.Common.csproj", "{D6B51A0B-F5FD-4FA6-B2E9-792540C0A528}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45FE97D7-A0C2-425F-9B8A-9BF1D8DA3616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45FE97D7-A0C2-425F-9B8A-9BF1D8DA3616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45FE97D7-A0C2-425F-9B8A-9BF1D8DA3616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45FE97D7-A0C2-425F-9B8A-9BF1D8DA3616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCBF89A2-0714-4490-8B62-192819563C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCBF89A2-0714-4490-8B62-192819563C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCBF89A2-0714-4490-8B62-192819563C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCBF89A2-0714-4490-8B62-192819563C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D58C893-76EC-41ED-83A8-912CEAFCB958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D58C893-76EC-41ED-83A8-912CEAFCB958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D58C893-76EC-41ED-83A8-912CEAFCB958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D58C893-76EC-41ED-83A8-912CEAFCB958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CEF804F-DAB8-4C86-B632-BB090A0F707E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEF804F-DAB8-4C86-B632-BB090A0F707E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CEF804F-DAB8-4C86-B632-BB090A0F707E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CEF804F-DAB8-4C86-B632-BB090A0F707E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80472DCB-7A72-4A0F-A996-E64C081B5759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80472DCB-7A72-4A0F-A996-E64C081B5759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80472DCB-7A72-4A0F-A996-E64C081B5759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80472DCB-7A72-4A0F-A996-E64C081B5759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB17EA4B-7BE0-4E7A-9E28-53E2A39FACCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB17EA4B-7BE0-4E7A-9E28-53E2A39FACCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB17EA4B-7BE0-4E7A-9E28-53E2A39FACCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB17EA4B-7BE0-4E7A-9E28-53E2A39FACCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B51A0B-F5FD-4FA6-B2E9-792540C0A528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B51A0B-F5FD-4FA6-B2E9-792540C0A528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B51A0B-F5FD-4FA6-B2E9-792540C0A528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B51A0B-F5FD-4FA6-B2E9-792540C0A528}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF018437-BAD8-4AF5-A940-9B7215BA9889} = {E43645B4-812A-456C-B188-4C2439724F2F}
+		{45FE97D7-A0C2-425F-9B8A-9BF1D8DA3616} = {CF018437-BAD8-4AF5-A940-9B7215BA9889}
+		{CCBF89A2-0714-4490-8B62-192819563C0F} = {91C19966-8D56-4522-BAA8-91C806521FD5}
+		{3D58C893-76EC-41ED-83A8-912CEAFCB958} = {F75EBD7E-3BE7-4421-B6C6-C18AC07C3A63}
+		{6CEF804F-DAB8-4C86-B632-BB090A0F707E} = {F75EBD7E-3BE7-4421-B6C6-C18AC07C3A63}
+		{80472DCB-7A72-4A0F-A996-E64C081B5759} = {A8F694F0-20AA-4C66-A195-0CE56CCE96EA}
+		{AB17EA4B-7BE0-4E7A-9E28-53E2A39FACCA} = {D573C03A-D18E-435E-8BBC-667661F1972B}
+		{DCB17E13-45CB-4856-ACBB-9A1C5AB71C13} = {E43645B4-812A-456C-B188-4C2439724F2F}
+		{D6B51A0B-F5FD-4FA6-B2E9-792540C0A528} = {DCB17E13-45CB-4856-ACBB-9A1C5AB71C13}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18592135-B9F7-4F62-A128-1C6532799371}
+	EndGlobalSection
+EndGlobal
