@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h2>Categories</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img src="@item.ImageSource" class="modelicon"/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.CategoryId }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

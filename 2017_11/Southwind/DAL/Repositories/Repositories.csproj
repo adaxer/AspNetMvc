@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D543A18B-E487-45C4-A254-365AF3116B28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Southwind.Data.Repositories</RootNamespace>
+    <AssemblyName>Southwind.Data.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Category.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </None>
+    <Compile Include="CategoryConfiguration.cs">
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FakeDbSet.cs">
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FakeSouthwindDb.cs">
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GenericRepository.cs" />
+    <Compile Include="ISouthwindDb.cs">
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+    <None Include="Product.cs">
+      <DependentUpon>NorthwindModels.tt</DependentUpon>
+    </None>
+    <Compile Include="ProductConfiguration.cs">
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SouthwindDb.cs">
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SouthwindDbFactory.cs">
+      <DependentUpon>NorthwindData.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NorthwindModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NorthwindModels.cs</LastGenOutput>
+      <CustomToolNamespace>Southwind.Contracts.Models</CustomToolNamespace>
+    </Content>
+    <Content Include="NorthwindData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NorthwindData.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="EF.Reverse.POCO.ttinclude" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CL\Interfaces\Interfaces.csproj">
+      <Project>{BDA5E8F7-8FC0-4AEE-A92E-4CB7BA7F753F}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CL\Models\Models.csproj">
+      <Project>{7e6383d5-6d4c-4a75-b090-001ed539ed16}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

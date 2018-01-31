@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Southwind.Contracts.Models</AssemblyName>
+    <RootNamespace>Southwind.Contracts.Models</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\DAL\Repositories\Category.cs" Link="Category.cs" />
+    <Compile Include="..\..\DAL\Repositories\Product.cs" Link="Product.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
